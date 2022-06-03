@@ -81,7 +81,7 @@ namespace test_task
                 {
                     continue;
                 }
-                int count = 1;
+                int count = 0;
                 foreach (ListNode item1 in listRand)
                 {
                     if (randomValue != count)

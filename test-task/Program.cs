@@ -8,22 +8,23 @@ namespace test_task
         static void Main(string[] args)
         {
             var listRand = new ListRand();
-            //listRand.Add("2222");
-            //listRand.Add("3333");
-            //listRand.Add("4444");
-            //listRand.Add("5555");
+            listRand.Add("1111");
+            listRand.Add("2222");
+            listRand.Add("3333");
+            listRand.Add("4444");
+            listRand.Add("5555");
 
-            //listRand.InstallRandValue(listRand);
+            listRand.InstallRandValue(listRand);
 
 
 
-          //  Serialize(listRand);
+            Serialize(listRand);
 
-            Deserialize(listRand);
+           //Deserialize(listRand);
 
-            foreach (var item in listRand)
+            foreach (ListNode item in listRand)
             {
-                Console.WriteLine(item);
+                Console.WriteLine("Item " + item + "Rand " + item.Rand);
             }
 
         }
