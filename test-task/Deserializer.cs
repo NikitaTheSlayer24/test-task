@@ -96,7 +96,7 @@ namespace test_task
         {
             foreach (var data in listNodeStructData)
             {
-                listRand.InstallRandValue(listRand, data.ListNode, Convert.ToInt32(data.Rand));
+                listRand.InstallRandValue(listRand, Convert.ToInt32(data.Rand));
             }
         }
 

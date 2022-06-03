@@ -73,19 +73,25 @@ namespace test_task
             }
         }
 
-        public void InstallRandValue(ListRand listRand, ListNode listNode, int randomValue)
+        public void InstallRandValue(ListRand listRand, int randomValue)
         {
-            int count = 1;
-
             foreach (ListNode item in listRand)
             {
-                if (randomValue != count)
+                if (item.Rand != null)
                 {
-                    count++;
                     continue;
                 }
-                listNode.Rand = item;
-                break;
+                int count = 1;
+                foreach (ListNode item1 in listRand)
+                {
+                    if (randomValue != count)
+                    {
+                        count++;
+                        continue;
+                    }
+                    item.Rand = item1;
+                    return;
+                }
             }
         }
 
